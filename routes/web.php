@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,4 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\PostController::class, 'index']);
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Auth::routes();
+
+Route::get('/profile', [App\Http\Controllers\HomeController::class, 'index'])->name('profile');
+Route::get('/category', [App\Http\Controllers\HomeController::class, 'category'])->name('category');
+Route::get('/products', [App\Http\Controllers\HomeController::class, 'products'])->name('products');

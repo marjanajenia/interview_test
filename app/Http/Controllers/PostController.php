@@ -13,6 +13,8 @@ class PostController extends Controller
         // get here all post with who user created this post with eager loading.
         // compact the post data to welcome view.
 
+        $posts = Post::with('user')->get();
+
         return view('welcome', compact('posts'));
     }
 }

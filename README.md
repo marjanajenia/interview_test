@@ -1,47 +1,57 @@
 #Instruction
 
-## Step 1:
+
+#### Requirements:
+- To complete the tasks outlined below, you will need:
+- Proficiency in Laravel, MySQL, JavaScript and jQuery.
+- Access to a hosting server for deployment or the ability to use a free hosting service like [InfinityFree](https://www.infinityfree.com/).
+
+Deadline: 25/04/2024 11:59:59 PM
+
+
+
+#### Task Overview:
+
+This is an "Product Management System" developed using Laravel, MySQL, JavaScript and jQuery. The project requires complete to several modules. Firstly need to separate the layout for each type user (Admin, Vendor, Customer). Also, it needs to be made Category and Product Module. Here need to apply product and category many to many relations and product with features hasmany relation. . Here is an overview of the tasks to be completed and the issues that must be resolved.
+#### Project Setup Instructions:
 
 - Clone this repository form this url
 
-``` 
+```bash
 git clone https://github.com/jugol-kumar/internship-test.git
 ```
-
-## Step 2:
 - Setup your project with composer requirement. 
 - Setup a database with your preferred name.
 - Run php artisan migrate:fresh --seed command after setup Database.
-```angular2html
+```bash
 php artisan migrate:fresh --seed
 ```
 
 
-## Step 3:
-- Goto welcome blade file.
-- Design this ui using your preferred css framework. bootstrap-5, css-3, tailwindcss.
-- Design this layout with grid view.
-- Single card design with flex. 
+#### Task and Issues:
+
+### Task 1: 
+Setup the unique template layout for each type user. By default load here common layout. 
+
+
+### Task 2:
+Upload user profile picture using by jquery ajax request system. must be use another router and controller for these operations.
+
+
+### Task 3:
+Complete the category module that displays categories along with the count of products they contain. Ensure it's created by this uer and utilizes eager loading for efficiency. Each category may have multiple products associated with it. Implement pagination to manage the display of data for a smoother user experience.
+
+### Task 4:
+Develop a product module that retrieves all products along with their associated categories and product features. Each product may belong to multiple categories and have multiple features. Utilize eager loading to efficiently load categories and features for each product. Additionally, ensure that only products created by the authenticated user (where the creator ID matches the authenticated user's ID) are displayed. Implement pagination to manage the display of data for a smoother user experience.
 
 
 
-<img src="https://i.ibb.co/N3KN8dB/ui.png" alt="Laravel Logo">
+#### Submission Process:
+Please respond to this email thread by 14-11-24, providing the following information:
+- Complete all task.
+- Deploy the update project and share live url (not mandatory).
+- Upload this project in GitHub and share repository link.
+- Share live url and repository email or whatsapp 01889-992919.
 
 
-## Step 4:
-- After designing the UI, go to the PostController.php file.
-- Load the post data with eager loading for users.
-- Render this data in your designed UI.
-- Display the single post data in a dedicated card view.
-
-## Step 5: 
-- Upload this project your github repository
-- Share your repository in this whatsapp.
-- Whatsapp: 
-  - 01889-992919
-
-
-# If Need Any Help:
-
-- Whatsapp: 
-  - 01889-992919
+Thanks and regards, Best of luck.
