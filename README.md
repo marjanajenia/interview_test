@@ -6,9 +6,6 @@
 - Proficiency in Laravel, MySQL, JavaScript and jQuery.
 - Access to a hosting server for deployment or the ability to use a free hosting service like [InfinityFree](https://www.infinityfree.com/).
 
-Deadline: 25/04/2024 11:59:59 PM
-
-
 
 #### Task Overview:
 
@@ -47,11 +44,9 @@ Develop a product module that retrieves all products along with their associated
 
 
 #### Submission Process:
-Please respond to this email thread by 14-11-24, providing the following information:
 - Complete all task.
 - Deploy the update project and share live url (not mandatory).
 - Upload this project in GitHub and share repository link.
-- Share live url and repository email or whatsapp 01889-992919.
 
 
 Thanks and regards, Best of luck.
