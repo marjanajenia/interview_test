@@ -7,6 +7,7 @@
             <p>This Panel For You....</p>
         </div>
         <div class="row justify-content-between">
+            @if (Auth::user()->user_type == 'admin' || Auth::user()->user_type == 'vendor')
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">{{ __('Action Menu') }}</div>
@@ -26,6 +27,20 @@
                     </div>
                 </div>
             </div>
+            @elseif (Auth::user()->user_type == 'customer')
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">{{ __('Action Menu') }}</div>
+                    <div class="card-body">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item rounded-md">
+                                <a class="nav-link  p-3 rounded-md {{ Route::is('profile') ? 'active' : '' }}" href="{{ route('profile') }}">Profile</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            @endif
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">{{ __($title) }}</div>

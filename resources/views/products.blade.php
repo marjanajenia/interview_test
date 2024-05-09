@@ -1,37 +1,43 @@
 @extends('layouts.admin', ['title' => 'Products'])
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
 @section('mainContent')
     <div class="container">
         <div class="products mb-3">
-            @for($p=1; $p < 6 ; $p++)
+            @foreach($products as $product)
+            @if(auth()->user()->id == $product->user_id)
                 <div class="__single">
                 <div class="image">
-                    <img class="w-100" src="https://www.bdshop.com/pub/media/catalog/product/cache/eaf695a7c2edd83636a0242f7ce59484/b/a/baseus_6-in-1_usb_c_hub.jpg" alt="">
+                    <img class="w-100" src="{{ asset('image/' .$product->image) }}" alt="Product_image">
                 </div>
                 <div>
-                    <h2>Best Electronics update In 2024</h2>
+                    <h2>{{ $product->name }}</h2>
                     <div>
                         <p class="fw-bold m-0">Categories:</p>
                         <div>
-                            @for($i=0; $i < 4 ; $i++)
-                                <span class="badge bg-info text-capitalize">category 1</span>
-                            @endfor
+                            @foreach($product->category as $category)
+                                <span class="badge bg-info text-capitalize">{{ $category->name }}</span>
+                            @endforeach
                         </div>
                     </div>
                     <div>
                         <p class="fw-bold m-0">Features:</p>
                         <ul>
-                            @for($i=0; $i < 4 ; $i++)
-                                <li class="text-capitalize">{{ 'feature'.$i }}</li>
-                            @endfor
+                            @foreach($product->feature as $feature)
+                                <li class="text-capitalize">{{ $feature->description }}</li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
             </div>
-            @endfor
+            @endif
+            @endforeach
         </div>
+        {{
+            $products->links('pagination::bootstrap-4')
+         }}
 
-        <nav aria-label="Page navigation example mt-2">
+        {{--  <nav aria-label="Page navigation example mt-2">
             <ul class="pagination">
                 <li class="page-item"><a class="page-link" href="#">Previous</a></li>
                 <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -39,7 +45,7 @@
                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                 <li class="page-item"><a class="page-link" href="#">Next</a></li>
             </ul>
-        </nav>
+        </nav>  --}}
     </div>
 
     <script>
