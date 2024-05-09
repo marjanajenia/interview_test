@@ -2,23 +2,27 @@
 
 namespace Database\Seeders;
 
-use App\Models\Category;
+use App\Models\CategoryProduct;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
-class CatSeeder extends Seeder
+class CategoryProductSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Category::create([
-            'name' => 'Test category',
+        CategoryProduct::create([
+            'category_id' => 1,
+            'product_id' => 1,
         ]);
-        Category::create([
-            'name' => 'Test category2',
+        CategoryProduct::create([
+            'category_id' => 2,
+            'product_id' => 1,
         ]);
+
+
     }
 }

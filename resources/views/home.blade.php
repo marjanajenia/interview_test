@@ -2,6 +2,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 @section('mainContent')
+<div id="msg"></div>
 <div class="container">
     <div class="d-flex justify-content-between">
         <div class="d-flex gap-3">
@@ -56,7 +57,16 @@
                     processData:false,
 
                     success:function(result){
-
+                        $("msg").html(
+                            `
+                            <div class="alert alert-success" role="success">
+                                Image uploaded Successfully
+                            </div>
+                            `
+                        )
+                    },
+                    error: function (data) {
+                        console.log('Error:', data);
                     }
                 })
             });

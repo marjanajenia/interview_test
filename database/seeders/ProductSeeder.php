@@ -19,5 +19,11 @@ class ProductSeeder extends Seeder
             'image' => '/placeholder.png',
             'user_id' => 1,
         ]);
+        Product::create([
+            'name' => 'Test Product',
+            'image' => '/placeholder.png',
+            'user_id' => 1,
+        ]);
+
     }
 }
